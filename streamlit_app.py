@@ -479,6 +479,7 @@ def display_source_card(source, index):
     
     # Fix the f-string by extracting the content preview separately
     content_preview = source['content_preview'][:300]
+    relevance_text = "Excellent" if source['similarity_score'] > 0.7 else "Good" if source['similarity_score'] > 0.5 else "Moderate"
     
     st.markdown(f"""
     <div style="background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%); padding: 1rem; border-radius: 0.75rem; border-left: 4px solid #eab308; margin: 0.5rem 0; box-shadow: 0 2px 4px rgba(234, 179, 8, 0.1);">
@@ -489,7 +490,7 @@ def display_source_card(source, index):
             </span>
         </div>
         <div style="color: #78716c; font-size: 0.9rem; margin-bottom: 0.5rem;">
-            <strong>Relevance:</strong> {"Excellent" if source['similarity_score'] > 0.7 else "Good" if source['similarity_score'] > 0.5 else "Moderate"}
+            <strong>Relevance:</strong> {relevance_text}
         </div>
         <div style="background-color: #fffbeb; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid #fed7aa;">
             <strong>Content Preview:</strong><br>
