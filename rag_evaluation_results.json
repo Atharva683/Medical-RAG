@@ -1,0 +1,92 @@
+{
+  "evaluation_dataset_size": 5,
+  "timestamp": "2025-07-31T15:31:08.987657",
+  "retrieval_evaluation": {
+    "individual_scores": [
+      {
+        "question": "What is the recommended treatment for type 2 diabetes?",
+        "keyword_overlap": 0.75,
+        "avg_similarity": 0.5170090993245443,
+        "num_retrieved": 3
+      },
+      {
+        "question": "How should blood glucose be monitored in diabetic patients?",
+        "keyword_overlap": 0.3333333333333333,
+        "avg_similarity": 0.5673861503601074,
+        "num_retrieved": 3
+      },
+      {
+        "question": "What are the diagnostic criteria for diabetes mellitus?",
+        "keyword_overlap": 1.0,
+        "avg_similarity": 0.580224335193634,
+        "num_retrieved": 3
+      },
+      {
+        "question": "What complications can arise from diabetes?",
+        "keyword_overlap": 1.0,
+        "avg_similarity": 0.556068996588389,
+        "num_retrieved": 3
+      },
+      {
+        "question": "What are the dietary recommendations for diabetes management?",
+        "keyword_overlap": 1.0,
+        "avg_similarity": 0.5510012904802958,
+        "num_retrieved": 3
+      }
+    ],
+    "overall_metrics": {
+      "avg_keyword_overlap": 0.8166666666666667,
+      "avg_similarity": 0.5543379743893941,
+      "avg_retrieved_sections": 3.0,
+      "retrieval_success_rate": 1.0
+    }
+  },
+  "answer_evaluation": {
+    "individual_scores": [
+      {
+        "question": "What is the recommended treatment for type 2 diabetes?",
+        "answer_length": 132,
+        "word_overlap": 0.13043478260869565,
+        "contains_no_info": false,
+        "answer_preview": "Based on the medical guidelines, here's what I found:\n\n\n**From section 'MANAGEMENT OF':**\nDIABETES MELLITUS\n(Relevance score: 0.52)\n\n**From section 'REFERENCES':**\nMany references have been consulted ..."
+      },
+      {
+        "question": "How should blood glucose be monitored in diabetic patients?",
+        "answer_length": 183,
+        "word_overlap": 0.45454545454545453,
+        "contains_no_info": false,
+        "answer_preview": "Based on the medical guidelines, here's what I found:\n\n\n**From section 'DIABETES MELLITUS (Part 4)':**\n• Blood glucose should be measured, using glucose-sensitive reagent strips to confirm the diagnos..."
+      },
+      {
+        "question": "What are the diagnostic criteria for diabetes mellitus?",
+        "answer_length": 136,
+        "word_overlap": 0.25,
+        "contains_no_info": false,
+        "answer_preview": "Based on the medical guidelines, here's what I found:\n\n\n**From section 'MANAGEMENT OF':**\nDIABETES MELLITUS\n(Relevance score: 0.66)\n\n**From section 'DIABETES MELLITUS (Part 1)':**\nBasic principles • C..."
+      },
+      {
+        "question": "What complications can arise from diabetes?",
+        "answer_length": 90,
+        "word_overlap": 0.05555555555555555,
+        "contains_no_info": false,
+        "answer_preview": "Based on the medical guidelines, here's what I found:\n\n\n**From section 'MANAGEMENT OF':**\nDIABETES MELLITUS\n(Relevance score: 0.60)\n\n**From section 'INTRODUCTION':**\nAvailable data from many countries..."
+      },
+      {
+        "question": "What are the dietary recommendations for diabetes management?",
+        "answer_length": 176,
+        "word_overlap": 0.13636363636363635,
+        "contains_no_info": false,
+        "answer_preview": "Based on the medical guidelines, here's what I found:\n\n\n**From section 'REFERENCES':**\nMany references have been consulted in the preparation of these guidelines. The \nfollowing deserve special mentio..."
+      }
+    ],
+    "overall_metrics": {
+      "avg_answer_length": 143.4,
+      "avg_word_overlap": 0.2053798858146684,
+      "no_info_rate": 0.0,
+      "successful_answers": 1.0
+    }
+  },
+  "ragas_evaluation": {
+    "error": "RAGAS evaluation failed: The metric [context_precision] that is used requires the following additional columns ['reference'] to be present in the dataset."
+  }
+}
