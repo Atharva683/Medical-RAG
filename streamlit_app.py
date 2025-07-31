@@ -404,13 +404,15 @@ def main():
         # Answer display with better formatting
         st.markdown("### 💡 AI Response")
         
+        # Fix f-string syntax by extracting the newline replacement
+        answer_content = result["answer"].replace('\n', '<br>')
         answer_html = f"""
         <div class="answer-box">
             <div style="margin-bottom: 0.5rem;">
                 <strong style="color: #1e3a8a;">Medical Guidelines Response:</strong>
             </div>
             <div style="line-height: 1.6; color: #374151;">
-                {result["answer"].replace('\n', '<br>')}
+                {answer_content}
             </div>
         </div>
         """
